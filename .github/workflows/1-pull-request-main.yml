@@ -60,9 +60,16 @@ jobs:
 
       - name: Criar pull request se necessário
         run: |
+          git fetch origin main
+          
           EXISTING=$(gh pr list --head $BRANCH_NAME --base main --state open --json number --jq '.[].number')
           if [ -z "$EXISTING" ]; then
             echo "Nenhum PR aberto encontrado. Criando PR..."
+            
+            git checkout $BRANCH_NAME
+            git commit --allow-empty -m "Commit inicial na branch $BRANCH_NAME"
+            git push origin $BRANCH_NAME
+
             gh pr create --base main --head $BRANCH_NAME --title "Merge main <-- $BRANCH_NAME" --body "Pull request automático"
           else
             echo "PR já existe: #$EXISTING. Novo commit já foi adicionado ao PR."
