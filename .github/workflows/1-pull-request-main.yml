@@ -41,6 +41,17 @@ jobs:
       - name: Obter nome da branch atual
         run: echo "BRANCH_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
 
+      - name: Verificar branch 'main'
+        run: |
+          if ! git ls-remote --exit-code --heads origin main; then
+            echo "Branch 'main' não encontrada. Criando..."
+            git checkout --orphan main
+            git commit --allow-empty -m "Initial commit on main"
+            git push origin main
+          else
+            echo "Branch 'main' já existe."
+          fi
+
       - name: Enviar branch de feature para o remoto
         run: git push origin $BRANCH_NAME
 
