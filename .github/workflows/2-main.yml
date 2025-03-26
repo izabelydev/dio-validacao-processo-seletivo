@@ -1,0 +1,27 @@
+name: "[MAIN] Build"
+
+on:
+  pull_request:
+    branches: main
+    types: closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+      - name: Verificar código
+        uses: actions/checkout@v3
+
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Instalar Maven
+        run: sudo apt-get install maven
+
+      - name: Construir projeto com Maven
+        run: mvn clean install -DskipTests
