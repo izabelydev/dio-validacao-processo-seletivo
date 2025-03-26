@@ -43,11 +43,14 @@ jobs:
 
       - name: Verificar branch 'main'
         run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
           if ! git ls-remote --exit-code --heads origin main; then
             echo "Branch 'main' não encontrada. Criando..."
             git checkout --orphan main
             git commit --allow-empty -m "Initial commit on main"
-            git push origin main
+            git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} main
           else
             echo "Branch 'main' já existe."
           fi
