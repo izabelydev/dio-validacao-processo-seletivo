@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ResultadoProposta {
+    private String codigoVaga;
     private double salarioBase;
     private String resultado;
     private boolean ligar;
