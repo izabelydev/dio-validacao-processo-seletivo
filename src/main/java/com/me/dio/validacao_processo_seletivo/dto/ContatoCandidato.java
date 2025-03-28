@@ -1,4 +1,4 @@
-package com.me.dio.validacao_processo_seletivo.input;
+package com.me.dio.validacao_processo_seletivo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

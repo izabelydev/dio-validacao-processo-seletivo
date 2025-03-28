@@ -1,6 +1,5 @@
-package com.me.dio.validacao_processo_seletivo.output;
+package com.me.dio.validacao_processo_seletivo.dto;
 
-import com.me.dio.validacao_processo_seletivo.input.Candidato;
 import lombok.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.me.dio.validacao_processo_seletivo.output;
+package com.me.dio.validacao_processo_seletivo.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
