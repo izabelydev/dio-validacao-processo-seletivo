@@ -37,14 +37,13 @@ public class InclusaoCandidatos {
      * assim que o processo inicia.
      */
 
-    private Candidatos candidatos;
-    private CandidatosSelecionados candidatosSelecionados;
+    private Candidatos candidatos = new Candidatos();
+    private CandidatosSelecionados candidatosSelecionados = new CandidatosSelecionados();
 
     @PostConstruct
     public Object cadastrarCandidatos() {
         ObjectMapper mapper = new ObjectMapper();
         InclusaoDadosCandidatos inclusaoDadosCandidatos = new InclusaoDadosCandidatos();
-        this.candidatos = new Candidatos();
 
         try {
             JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia.json"));
@@ -73,7 +72,6 @@ public class InclusaoCandidatos {
     public Object selecionarNovosCandidatos() {
 
         ArrayList<CandidatoSelecionado> candidatosLista = new ArrayList<>();
-        this.candidatosSelecionados = new CandidatosSelecionados();
         var candidatosCadastrados = this.candidatos.getCandidatos();
 
         for(int i = 0; i < 5; i++) {
