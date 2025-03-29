@@ -2,8 +2,6 @@ package com.me.dio.validacao_processo_seletivo.data;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.me.dio.validacao_processo_seletivo.dto.CandidatoSelecionado;
-import com.me.dio.validacao_processo_seletivo.dto.ResultadoProposta;
 import com.me.dio.validacao_processo_seletivo.dto.Candidatos;
 import com.me.dio.validacao_processo_seletivo.dto.CandidatosSelecionados;
 import jakarta.annotation.PostConstruct;
@@ -39,11 +37,13 @@ public class InclusaoCandidatos {
 
     private Candidatos candidatos = new Candidatos();
     private CandidatosSelecionados candidatosSelecionados = new CandidatosSelecionados();
+    private InclusaoDadosCandidatos inclusaoDadosCandidatos = new InclusaoDadosCandidatos();
 
     @PostConstruct
+    private void iniciar() {cadastrarCandidatos(); selecionarNovosCandidatos();}
+
     public Object cadastrarCandidatos() {
         ObjectMapper mapper = new ObjectMapper();
-        InclusaoDadosCandidatos inclusaoDadosCandidatos = new InclusaoDadosCandidatos();
 
         try {
             JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia.json"));
@@ -53,9 +53,7 @@ public class InclusaoCandidatos {
             emails = mapper.convertValue(dadosJson.get("email"), ArrayList.class);
             celulares = mapper.convertValue(dadosJson.get("celular"), ArrayList.class);
 
-            if(!nomes.isEmpty() && !emails.isEmpty() && !celulares.isEmpty()) {
-                this.candidatos.setCandidatos(inclusaoDadosCandidatos.popularDadosCandidato(nomes, emails, celulares));
-            }
+            this.candidatos.setCandidatos(inclusaoDadosCandidatos.popularDadosCandidato(nomes, emails, celulares));
 
             log.info("[INFO] Dados dos {} candidatos processados e cadastrados com sucesso",
                     this.candidatos.getCandidatos().size());
@@ -70,22 +68,17 @@ public class InclusaoCandidatos {
     }
 
     public Object selecionarNovosCandidatos() {
+        try {
+            var candidatoLista = inclusaoDadosCandidatos.popularDadosCandidatoSelecionado(this.candidatos.getCandidatos());
+            this.candidatosSelecionados.setCandidatosSelecionados(candidatoLista);
+//            log.info("[INFO] 5 candidatos dos {} candidatos cadastrados foram selecionados com sucesso",
+//                    this.candidatos.getCandidatos().size());
 
-        ArrayList<CandidatoSelecionado> candidatosLista = new ArrayList<>();
-        var candidatosCadastrados = this.candidatos.getCandidatos();
-
-        for(int i = 0; i < 5; i++) {
-            var candidatoSelecionado = new CandidatoSelecionado();
-            var resultadoProposta = new ResultadoProposta();
-
-            candidatoSelecionado.setCandidato(candidatosCadastrados.get(i));
-            candidatoSelecionado.setResultadoProposta(resultadoProposta);
-            candidatosLista.add(candidatoSelecionado);
+        } catch (Exception e) {
+            log.error("[ERRO] Nao foi possivel processar candidatos a serem selecionados: ", e);
+            this.candidatosSelecionados.setCandidatosSelecionados(null);
+            throw new RuntimeException(e);
         }
-
-        this.candidatosSelecionados.setCandidatosSelecionados(candidatosLista);
-        log.info("[INFO] 5 candidatos dos {} candidatos cadastrados foram selecionados com sucesso",
-                this.candidatos.getCandidatos().size());
 
         return this.candidatosSelecionados;
     }

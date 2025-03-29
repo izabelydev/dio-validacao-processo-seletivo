@@ -22,7 +22,7 @@ public class CandidatosController {
         return inclusaoCandidatos.getCandidatos();
     }
 
-    @GetMapping("/selecionar-novos-selecionados")
+    @GetMapping("/selecionar-novos-candidatos")
     public Object novosCandidatosSelecionados() {
         return inclusaoCandidatos.selecionarNovosCandidatos();
     }
