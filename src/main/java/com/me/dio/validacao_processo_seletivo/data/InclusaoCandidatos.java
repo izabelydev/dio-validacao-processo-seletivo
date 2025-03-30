@@ -46,7 +46,9 @@ public class InclusaoCandidatos {
         ObjectMapper mapper = new ObjectMapper();
 
         try {
-            JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia.json"));
+//            JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia_50.json"));
+//            JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia_100_faltando_dados.json"));
+            JsonNode dadosJson = mapper.readTree(new File("src/main/resources/data/candidatos_gerados_ia_100.json"));
             ArrayList<String> nomes, emails, celulares;
 
             nomes = mapper.convertValue(dadosJson.get("nome_candidato"), ArrayList.class);
@@ -71,15 +73,11 @@ public class InclusaoCandidatos {
         try {
             var candidatoLista = inclusaoDadosCandidatos.popularDadosCandidatoSelecionado(this.candidatos.getCandidatos());
             this.candidatosSelecionados.setCandidatosSelecionados(candidatoLista);
-//            log.info("[INFO] 5 candidatos dos {} candidatos cadastrados foram selecionados com sucesso",
-//                    this.candidatos.getCandidatos().size());
-
         } catch (Exception e) {
             log.error("[ERRO] Nao foi possivel processar candidatos a serem selecionados: ", e);
             this.candidatosSelecionados.setCandidatosSelecionados(null);
             throw new RuntimeException(e);
         }
-
         return this.candidatosSelecionados;
     }
 }

@@ -22,9 +22,8 @@ public class InclusaoDadosCandidatos {
     }
 
     private <T> T popularCampo(int i, List<T> lista) {
-        if (lista != null && !lista.isEmpty() && i < lista.size()) {
-            return lista.get(i);
-        } else return null;
+        if (lista != null && !lista.isEmpty() && i < lista.size()) return lista.get(i);
+        else return null;
     }
 
     public ArrayList<Candidato> popularDadosCandidato(ArrayList<String> nomes, ArrayList<String> emails,
@@ -54,9 +53,9 @@ public class InclusaoDadosCandidatos {
         return candidatosLista;
     }
 
-    private ResultadoEnum avaliarCandidato(List<Candidato> candidatos, int i) {
+    private ResultadoEnum avaliarCandidato(Candidato candidato) {
         var salarioBase = 2000.0;
-        var salarioPretendido = candidatos.get(i).getSalarioPretendido();
+        var salarioPretendido = candidato.getSalarioPretendido();
 
         if(salarioBase > salarioPretendido) return ResultadoEnum.CLASSIFICADO;
         else if(salarioBase == salarioPretendido) return ResultadoEnum.CONTRA_PROPOSTA;
@@ -72,12 +71,13 @@ public class InclusaoDadosCandidatos {
     public List<CandidatoSelecionado> popularDadosCandidatoSelecionado(List<Candidato> candidatos) {
         if (candidatos == null || candidatos.isEmpty()) return null;
 
-        var tamanhoLista = candidatos.size();
-        var particao = Math.min(ultimoCandidato + 5, tamanhoLista);
+        var candidatoslistaTemp = new ArrayList<CandidatoSelecionado>();
+        int tamanhoLista = candidatos.size();
 
-        for (int i = ultimoCandidato; i < particao; i++) {
+        for (int i = ultimoCandidato + 1; candidatoslistaTemp.size() < 5 && i < tamanhoLista; i++) {
             var candidatoSelecionado = new CandidatoSelecionado();
-            var avaliacao = avaliarCandidato(candidatos, i);
+            var avaliacao = avaliarCandidato(candidatos.get(i));
+            var codVaga = String.valueOf(ThreadLocalRandom.current().nextInt(1111111, 9999999));
 
             if (avaliacao.getId()) {
                 var resultadoProposta = new ResultadoProposta();
@@ -87,21 +87,23 @@ public class InclusaoDadosCandidatos {
                 resultadoProposta.setResultado(avaliacao);
                 resultadoProposta.setLigar(true);
                 resultadoProposta.setSalarioBase(2000);
+                resultadoProposta.setCodigoVaga(codVaga);
 
+                candidatoslistaTemp.add(candidatoSelecionado);
                 this.candidatosLista.add(candidatoSelecionado);
+
+                log.info("[INFO] Candidato selecionado: {}", candidatoSelecionado.getCandidato().getCodigoCandidato());
             }
-            // o modulo % faz i sempre voltar para 0 quando ultrapassar o tamanho da lista (loop infinito)
-            // ultimoCandidato = (i + 1) % tamanhoLista;
             ultimoCandidato = i;
         }
 
         if (ultimoCandidato >= tamanhoLista) {
-            log.info("[INFO] Todos os candidatos foram processados. Total: {}", tamanhoLista);
-            ultimoCandidato = 0; // Reinicie se necessário
+            log.info("[INFO] Todos os candidatos foram processados. Mostrando selecionados: {} de {}",
+                    candidatosLista.size(), tamanhoLista);
+            return this.candidatosLista;
         } else {
-            log.info("[INFO] Ultimo candidato: {}", ultimoCandidato);
+            log.info("[INFO] Ultimo candidato processado: {}", ultimoCandidato);
+            return candidatoslistaTemp;
         }
-
-        return this.candidatosLista;
     }
 }

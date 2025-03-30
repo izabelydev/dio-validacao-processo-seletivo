@@ -1,0 +1,48 @@
+{
+  "nome_candidato": [
+    "Ana Souza", "Bruno Lima", "Carla Mendes", "Daniel Rocha", "Eduarda Silva",
+    "Fernando Almeida", "Gabriela Nunes", "Hugo Pereira", "Isabela Costa", "João Martins",
+    "Karla Oliveira", "Lucas Fernandes", "Mariana Teixeira", "Nathan Borges", "Olivia Santos",
+    "Paulo Ribeiro", "Quésia Monteiro", "Rafael Araújo", "Sabrina Fonseca", "Tiago Moura",
+    "Ursula Barros", "Vinícius Duarte", "Wesley Correia", "Xavier Batista", "Yasmin Ferreira",
+    "Zélia Lopes", "Amanda Cruz", "Bernardo Tavares", "Camila Andrade", "Diego Campos",
+    "Elaine Figueiredo", "Felipe Ramos", "Gisele Cardoso", "Henrique Machado", "Isadora Viana",
+    "Jorge Lima", "Kelly Souza", "Leonardo Mendes", "Mirela Santos", "Nelson Duarte",
+    "Otávio Correia", "Patrícia Rocha", "Quirino Alves", "Rodrigo Silveira", "Sônia Barreto",
+    "Tadeu Maciel", "Ubirajara Neves", "Vera Lemos", "Wellington Castro", "Ximena Moreira",
+    "Yago Moura", "Zuleica Nascimento", "Adriano Pires", "Bianca Santana", "César Brito",
+    "Daniela Reis", "Enzo Carvalho", "Fernanda Souza", "Giovanni Rocha", "Helena Duarte",
+    "Ian Monteiro", "Juliana Ribeiro", "Kleber Almeida", "Lorena Gomes", "Márcio Farias",
+    "Natália Silva", "Otília Nogueira", "Pedro Barbosa", "Quitéria Araújo", "Renato Pinto",
+    "Sandra Mendes", "Tomás Moura", "Úrsula Cardoso", "Vicente Ferreira", "William Castro",
+    "Xande Oliveira", "Yara Mendes", "Zulmira Figueiredo", "Aline Duarte", "Bruno Siqueira",
+    "Cátia Gomes", "Davi Rocha", "Esther Carvalho", "Fabiano Lopes", "Geovana Silveira",
+    "Henrique Campos", "Isis Martins", "Júlio Nogueira", "Kátia Ribeiro", "Luiz Mendes",
+    "Mônica Duarte", "Natanael Teixeira", "Orlando Barros", "Paloma Santana", "Raul Monteiro",
+    "Silvana Farias", "Tarcísio Lemos", "Ugo Moreira", "Vanessa Correia", "Wagner Moura",
+    "Xavier Nogueira", "Yolanda Fernandes", "Zeca Campos"
+  ],
+  "email": [
+    "ana.souza@email.com", "bruno.lima@email.com", "carla.mendes@email.com", "daniel.rocha@email.com", "eduarda.silva@email.com",
+    "fernando.almeida@email.com", "gabriela.nunes@email.com", "hugo.pereira@email.com", "isabela.costa@email.com", "joao.martins@email.com",
+    "karla.oliveira@email.com", "lucas.fernandes@email.com", "mariana.teixeira@email.com", "nathan.borges@email.com", "olivia.santos@email.com",
+    "paulo.ribeiro@email.com", "quesia.monteiro@email.com", "rafael.araujo@email.com", "sabrina.fonseca@email.com", "tiago.moura@email.com",
+    "ursula.barros@email.com", "vinicius.duarte@email.com", "wesley.correia@email.com", "xavier.batista@email.com", "yasmin.ferreira@email.com",
+    "zelia.lopes@email.com", "amanda.cruz@email.com", "bernardo.tavares@email.com", "camila.andrade@email.com", "diego.campos@email.com",
+    "elaine.figueiredo@email.com", "felipe.ramos@email.com", "gisele.cardoso@email.com", "henrique.machado@email.com", "isadora.viana@email.com",
+    "jorge.lima@email.com", "kelly.souza@email.com", "leonardo.mendes@email.com", "mirela.santos@email.com", "nelson.duarte@email.com",
+    "otavio.correia@email.com", "patricia.rocha@email.com", "quirino.alves@email.com", "rodrigo.silveira@email.com", "sonia.barreto@email.com",
+    "tadeu.maciel@email.com", "ubirajara.neves@email.com", "vera.lemos@email.com", "wellington.castro@email.com", "ximena.moreira@email.com",
+    "yago.moura@email.com", "zuleica.nascimento@email.com", "adriano.pires@email.com", "bianca.santana@email.com", "cesar.brito@email.com",
+    "daniela.reis@email.com", "enzo.carvalho@email.com", "fernanda.souza@email.com", "giovanni.rocha@email.com", "helena.duarte@email.com",
+    "ian.monteiro@email.com", "juliana.ribeiro@email.com", "kleber.almeida@email.com", "lorena.gomes@email.com", "marcio.farias@email.com",
+    "natalia.silva@email.com", "otilia.nogueira@email.com", "pedro.barbosa@email.com", "quiteria.araujo@email.com", "renato.pinto@email.com",
+    "sandra.mendes@email.com", "tomas.moura@email.com", "ursula.cardoso@email.com", "vicente.ferreira@email.com", "william.castro@email.com",
+    "xande.oliveira@email.com", "yara.mendes@email.com", "zulmira.figueiredo@email.com", "aline.duarte@email.com", "bruno.siqueira@email.com"
+  ],
+  "celular": [
+    "+55 11 98765-4321", "+55 11 98765-4322", "+55 11 98765-4323", "+55 11 98765-4324", "+55 11 98765-4325",
+    "+55 11 98765-4326", "+55 11 98765-4327", "+55 11 98765-4328", "+55 11 98765-4329", "+55 11 98765-4330",
+    "+55 11 98765-4331", "+55 11 98765-4332", "+55 11 98765-4333", "+55 11 98765-4334", "+55 11 98765-4335"
+  ]
+}
