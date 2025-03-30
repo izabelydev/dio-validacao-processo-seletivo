@@ -1,0 +1,41 @@
+{
+  "nome_candidato": [
+    "Ana Clara Santos", "Bruno Oliveira Rocha", "Carolina Pereira Costa", "Diego Almeida Souza", "Fernanda Lima Ribeiro",
+    "Gustavo Henrique Silva", "Isabela Martins Castro", "João Pedro Viana", "Larissa Fernandes Moura", "Marcos Antônio Nunes",
+    "Natália Duarte Pires", "Otávio Correia Lima", "Patrícia Gomes Teixeira", "Rafael Carvalho Mendes", "Sofia Barbosa Alves",
+    "Thiago Ramos Costa", "Valentina Soares Rios", "William Dias Cardoso", "Yasmin Freitas Lopes", "Carlos Eduardo Moraes",
+    "Amanda Reis Sampaio", "Leonardo Nascimento Azevedo", "Juliana Castro Pinto", "Vinícius Guimarães Peixoto", "Heloísa Vasconcelos Rocha",
+    "Ricardo Tavares Neves", "Mariana Andrade Fonseca", "Felipe Costa Barros", "Laura Mendonça Dantas", "Gabriel Siqueira Campos",
+    "Beatriz Rocha Santana", "Matheus Cunha Brito", "Luiza Oliveira Freire", "Eduardo Santos Torres", "Clara Machado Xavier",
+    "Rodrigo Prado Medeiros", "Camila Costa Bezerra", "Lucas Gabriel Soares", "Júlia Alencar Ribeiro", "André Luiz Cavalcanti",
+    "Letícia Furtado Marinho", "Paulo Ricardo Salgado", "Aline Souza Franco", "Guilherme Martins Porto", "Renata Vieira Luna",
+    "Hugo Batista Galvão", "Lorena Moreira Caldas", "Roberto Augusto Sales", "Tatiane Costa Miranda", "Igor Santos Albuquerque",
+    "Vanessa Lira Fontes"
+  ],
+  "email": [
+    "ana.clara.santos@example.com", "bruno.orocha@example.com", "carol.pcosta@example.com", "diego.asouza@example.com", "fe.lima.ribeiro@example.com",
+    "gustavo.h.silva@example.com", "isabela.mcastro@example.com", "joaopedroviana@example.com", "larissa.fmoura@example.com", "marcos.anunes@example.com",
+    "natalia.dpires@example.com", "otavio.clima@example.com", "patricia.gteixeira@example.com", "rafa.cmendes@example.com", "sofia.balves@example.com",
+    "thiago.rcosta@example.com", "valentina.srios@example.com", "william.dcardoso@example.com", "yasmin.flopes@example.com", "carlos.moraes@example.com",
+    "amanda.rsampaio@example.com", "leo.nazevedo@example.com", "juliana.cpinto@example.com", "vinicius.gpeixoto@example.com", "helo.vasconcelos@example.com",
+    "ricardo.tneves@example.com", "mariana.afonseca@example.com", "felipe.barros@example.com", "laura.mdantas@example.com", "gabriel.scampos@example.com",
+    "beatriz.rsantana@example.com", "matheus.cbrito@example.com", "luiza.ofreire@example.com", "eduardo.storres@example.com", "clara.mxavier@example.com",
+    "rodrigo.pmedeiros@example.com", "camila.cbezerra@example.com", "lucas.gsoares@example.com", "julia.aribeiro@example.com", "andre.cavalcanti@example.com",
+    "leticia.fmarinho@example.com", "paulo.rsalgado@example.com", "aline.sfranco@example.com", "guilherme.mporto@example.com", "renata.vluna@example.com",
+    "hugo.bgalvao@example.com", "lorena.mcaldas@example.com", "roberto.asales@example.com", "tatiane.cmiranda@example.com", "igor.salbuquerque@example.com",
+    "vanessa.lfontes@example.com"
+  ],
+  "celular": [
+    "(11) 98765-4321", "(21) 99876-5432", "(31) 99123-4567", "(19) 99234-5678", "(27) 99345-6789",
+    "(85) 99456-7890", "(51) 99567-8901", "(47) 99678-9012", "(98) 99789-0123", "(63) 99890-1234",
+    "(67) 99901-2345", "(92) 99112-2334", "(95) 99223-3445", "(68) 99334-4556", "(96) 99445-5667",
+    "(69) 99556-6778", "(61) 99667-7889", "(84) 99778-8990", "(81) 99889-9001", "(79) 99990-0112",
+    "(83) 99101-1223", "(86) 99212-2334", "(88) 99323-3445", "(89) 99434-4556", "(91) 99545-5667",
+    "(93) 99656-6778", "(94) 99767-7889", "(97) 99878-8990", "(99) 99989-9001", "(82) 99100-0112",
+    "(71) 99211-1223", "(73) 99322-2334", "(74) 99433-3445", "(75) 99544-4556", "(76) 99655-5667",
+    "(77) 99766-6778", "(78) 99877-7889", "(87) 99988-8990", "(62) 99199-9001", "(64) 99200-0112",
+    "(65) 99311-1223", "(66) 99422-2334", "(41) 99533-3445", "(42) 99644-4556", "(43) 99755-5667",
+    "(44) 99866-6778", "(45) 99977-7889", "(46) 99188-8990", "(48) 99299-9001", "(49) 99300-0112",
+    "(41) 99411-1223"
+  ]
+}
