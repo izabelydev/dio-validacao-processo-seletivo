@@ -1,6 +1,8 @@
 package com.me.dio.validacao_processo_seletivo.controller;
 
 import com.me.dio.validacao_processo_seletivo.data.InclusaoCandidatos;
+import com.me.dio.validacao_processo_seletivo.metrics.annotations.ContarCadastrados;
+import com.me.dio.validacao_processo_seletivo.metrics.annotations.ContarSelecionados;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,7 @@ public class CandidatosController {
     private final InclusaoCandidatos inclusaoCandidatos;
 
     @GetMapping("/candidatos-cadastrados")
+    @ContarCadastrados
     public Object candidatos() {
         return inclusaoCandidatos.getCandidatos();
     }
@@ -28,6 +31,7 @@ public class CandidatosController {
     }
 
     @GetMapping("/candidatos-selecionados")
+    @ContarSelecionados
     public Object candidatosSelecionados() {
         return inclusaoCandidatos.getCandidatosSelecionados();
     }

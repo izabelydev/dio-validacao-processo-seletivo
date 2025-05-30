@@ -2,6 +2,8 @@ package com.me.dio.validacao_processo_seletivo.data;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.me.dio.validacao_processo_seletivo.dto.Candidato;
+import com.me.dio.validacao_processo_seletivo.dto.CandidatoSelecionado;
 import com.me.dio.validacao_processo_seletivo.dto.Candidatos;
 import com.me.dio.validacao_processo_seletivo.dto.CandidatosSelecionados;
 import jakarta.annotation.PostConstruct;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Data
